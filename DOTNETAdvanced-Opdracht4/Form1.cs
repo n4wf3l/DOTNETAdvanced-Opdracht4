@@ -41,7 +41,7 @@ namespace DOTNETAdvanced_Opdracht4
                 }
                 else
                 {
-                    MessageBox.Show("de date moet in de toekomst zijn");
+                    MessageBox.Show("de datum is al voorbij.");
                 }
 
             }
@@ -184,5 +184,9 @@ namespace DOTNETAdvanced_Opdracht4
 
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

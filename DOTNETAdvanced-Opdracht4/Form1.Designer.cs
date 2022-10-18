@@ -39,6 +39,7 @@
             this.checkBox = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.info = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titel
@@ -51,22 +52,24 @@
             // 
             // toevoegen
             // 
+            this.toevoegen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toevoegen.Location = new System.Drawing.Point(504, 15);
             this.toevoegen.Name = "toevoegen";
             this.toevoegen.Size = new System.Drawing.Size(102, 44);
             this.toevoegen.TabIndex = 2;
-            this.toevoegen.Text = "Taak Toevoegen";
-            this.toevoegen.UseVisualStyleBackColor = true;
+            this.toevoegen.Text = "Toevoegen";
+            this.toevoegen.UseVisualStyleBackColor = false;
             this.toevoegen.Click += new System.EventHandler(this.toevoegen_Click);
             // 
             // volgende
             // 
+            this.volgende.BackColor = System.Drawing.Color.White;
             this.volgende.Location = new System.Drawing.Point(528, 65);
             this.volgende.Name = "volgende";
             this.volgende.Size = new System.Drawing.Size(78, 32);
             this.volgende.TabIndex = 3;
             this.volgende.Text = "Volgende";
-            this.volgende.UseVisualStyleBackColor = true;
+            this.volgende.UseVisualStyleBackColor = false;
             this.volgende.Click += new System.EventHandler(this.volgende_Click_1);
             // 
             // achteraan
@@ -114,21 +117,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.BackColor = System.Drawing.Color.MintCream;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(71, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 15);
+            this.label1.Size = new System.Drawing.Size(34, 17);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Titel / Omschrijving";
+            this.label1.Text = "Taak";
             // 
             // checkBox
             // 
             this.checkBox.AutoSize = true;
+            this.checkBox.BackColor = System.Drawing.Color.MintCream;
+            this.checkBox.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.checkBox.Location = new System.Drawing.Point(40, 61);
             this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(62, 19);
+            this.checkBox.Size = new System.Drawing.Size(65, 21);
             this.checkBox.TabIndex = 10;
             this.checkBox.Text = "Datum";
-            this.checkBox.UseVisualStyleBackColor = true;
+            this.checkBox.UseVisualStyleBackColor = false;
             this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged_1);
             // 
             // dateTimePicker1
@@ -137,6 +146,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // info
             // 
@@ -146,11 +156,24 @@
             this.info.Size = new System.Drawing.Size(329, 149);
             this.info.TabIndex = 13;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.MintCream;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(34, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Beschrijving";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(617, 303);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.info);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.checkBox);
@@ -163,7 +186,7 @@
             this.Controls.Add(this.toevoegen);
             this.Controls.Add(this.titel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "TeDoen";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +205,6 @@
         private CheckBox checkBox;
         private DateTimePicker dateTimePicker1;
         private TextBox info;
+        private Label label2;
     }
 }
